@@ -1,11 +1,10 @@
 <h1>Create a New Cocktail</h1>
-
-<%= simple_form_for @cocktail do |f| %>
+<div class="container">
+  <%= simple_form_for @cocktail do |f| %>
   <%= f.error_notification %>
   <%= f.input :name %>
-
-
-
   <%= f.button :submit, class: "btn-primary" %>
-  <%= link_to "back to Cocktail List" , cocktails_path  %>
+</div>
+
+<%= link_to "back to Cocktail List" , cocktails_path  %>
 <% end %>

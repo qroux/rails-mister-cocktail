@@ -1,11 +1,30 @@
-<h1>Cocktails</h1>
-
-<h4>Cocktail List</h4>
-<ul>
+<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://www.ritzparis.com/sites/default/files/images/card_page/part_images/ritz-paris-hotel-colin-field-bar-hemingway-fiche.jpg);">
+  <div class="container">
+    <h1> Monsieur Cocktail</h1>
+    <p>Definitly Lobster</p>
+  </div>
+</div>
+<div class="body">
+  <div>
+    <h3>Menu</h3>
+  </div>
   <% @cocktails.each do |cocktail| %>
-  <li><%= link_to "#{cocktail.name}",  cocktail_path(cocktail) %></li>
+  <div class="card-product">
+    <img src="https://img.static-rmg.be/a/food/image/q75/w1280/h720/1078532/cocktail-vodka-citron.jpg">
+    <div class="card-product-infos">
+      <h2><%= link_to "#{cocktail.name}",  cocktail_path(cocktail) %></h2>
+      <p>Product description with <strong>relevant info</strong> only.</p>
+    </div>
+  </div>
   <% end %>
-</ul>
-
-
-<%= link_to "Add a new Cocktail",  new_cocktail_path %>
+</div>
+<div id="add-button">
+  <%= link_to "+ Add a new Cocktail",  new_cocktail_path %>
+</div>
+<div class="footer">
+  <div class="footer-links">
+    <a href="#"><i class="fab fa-instagram"></i></a>
+    <a href="#"><i class="fab fa-facebook"></i></a>
+    <a href="#"><i class="fab fa-twitter"></i></a>
+  </div>
+</div>
