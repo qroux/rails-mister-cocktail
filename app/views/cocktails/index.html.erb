@@ -10,7 +10,8 @@
   </div>
   <% @cocktails.each do |cocktail| %>
   <div class="card-product">
-    <img src="https://img.static-rmg.be/a/food/image/q75/w1280/h720/1078532/cocktail-vodka-citron.jpg">
+    <img src=<%= cl_image_path(cocktail.photo,width: 400, height: 300, crop: :fill)%>>
+
     <div class="card-product-infos">
       <h2><%= link_to "#{cocktail.name}",  cocktail_path(cocktail) %></h2>
       <p>Product description with <strong>relevant info</strong> only.</p>
